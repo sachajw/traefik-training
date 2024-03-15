@@ -19,11 +19,11 @@ services:
 
 # Add the catapp service
   catapp:
-     # A Random Cat GIF generator application
-     image: mikesir87/cats:1.0
-     # We set a label to tell Traefik to assign a hostname to the new service
-     labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.catapp.rule=Host(`catapp.localhost`)"
-      - "traefik.http.routers.catapp.entrypoints=web"
-      - "traefik.http.services.catapp.loadbalancer.server.port=5000"
+      # A Random Cat GIF generator application
+      image: mikesir87/cats:1.0
+      # We set a label to tell Traefik to assign a hostname to the new service
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.catapp.rule=Host(`catapp.localhost`)"
+        - "traefik.http.routers.catapp.entrypoints=web"
+        - "traefik.http.services.catapp.loadbalancer.server.port=5000"
